@@ -79,7 +79,7 @@ export default function AdminScreen({ navigation }) {
       return;
     }
     try {
-      await api.agendamentos.update(editModal.id, editDate, editTime);
+      await api.agendamentos.update(editModal.id, editDate, `${editTime}:00`);
       Alert.alert('Sucesso', 'Agendamento atualizado.');
       setEditModal(null);
       loadAgendamentos();

@@ -30,8 +30,8 @@ export function useAuth() {
     return data;
   }, []);
 
-  const register = useCallback(async (nome, email, telefone, senha) => {
-    const data = await api.auth.register(nome, email, telefone, senha);
+  const register = useCallback(async (nome, email, senha) => {
+    const data = await api.auth.register(nome, email, senha);
     return data;
   }, []);
 

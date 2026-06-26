@@ -101,7 +101,7 @@ export default function HomeScreen({ navigation }) {
     try {
       await api.agendamentos.create(
         selectedDate,
-        selectedTime,
+        `${selectedTime}:00`,
         user.nome,
         selectedBarber
       );

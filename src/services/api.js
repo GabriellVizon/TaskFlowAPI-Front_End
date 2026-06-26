@@ -1,6 +1,6 @@
 import { getToken } from '../utils/storage';
 
-const BASE_URL = 'http://localhost:5089';
+const BASE_URL = 'http://10.0.2.2:5089';
 
 async function request(endpoint, options = {}) {
   const token = await getToken();
@@ -48,10 +48,10 @@ export const api = {
         method: 'POST',
         body: JSON.stringify({ email, senha }),
       }),
-    register: (nome, email, telefone, senha) =>
+    register: (nome, email, senha) =>
       request('/api/Auth/register', {
         method: 'POST',
-        body: JSON.stringify({ nome, email, telefone, senha }),
+        body: JSON.stringify({ nome, email, senha }),
       }),
   },
   agendamentos: {

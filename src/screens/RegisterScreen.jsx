@@ -23,21 +23,20 @@ const BACKGROUND_IMAGE =
 export default function RegisterScreen({ navigation }) {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const { register } = useAuth();
 
   async function handleRegister() {
-    if (!nome || !email || !phone || !password) {
+    if (!nome || !email || !password) {
       Alert.alert('Erro', 'Preencha todos os campos.');
       return;
     }
 
     setLoading(true);
     try {
-      await register(nome, email, phone, password);
+      await register(nome, email, password);
       navigation.navigate('Login');
     } catch (e) {
       Alert.alert('Erro', e.message || 'Erro ao registrar. Verifique os dados.');
@@ -96,18 +95,6 @@ export default function RegisterScreen({ navigation }) {
                     placeholderTextColor={colors['on-tertiary-container']}
                     keyboardType="email-address"
                     autoCapitalize="none"
-                  />
-                </View>
-
-                <View style={styles.inputGroup}>
-                  <Text style={styles.label}>Número de Telefone</Text>
-                  <TextInput
-                    style={styles.input}
-                    value={phone}
-                    onChangeText={setPhone}
-                    placeholder="(11) 99999-9999"
-                    placeholderTextColor={colors['on-tertiary-container']}
-                    keyboardType="phone-pad"
                   />
                 </View>
 

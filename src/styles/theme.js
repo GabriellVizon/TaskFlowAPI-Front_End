@@ -76,14 +76,14 @@ export const fonts = {
     fontWeight: '400',
   },
   'display-lg-mobile': {
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Bold',
     fontSize: 36,
     lineHeight: 42,
     letterSpacing: -0.02 * 36,
     fontWeight: '700',
   },
   'display-lg': {
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Bold',
     fontSize: 48,
     lineHeight: 56,
     letterSpacing: -0.02 * 48,
