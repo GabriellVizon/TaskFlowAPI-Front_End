@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Navalha Barbearia",
+    "slug": "navalha-barbearia",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#121414"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.navalha.barbearia"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#121414"
+      },
+      "package": "com.navalha.barbearia"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-asset"
+    ]
+  }
+}
